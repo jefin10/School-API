@@ -3,7 +3,7 @@ const app=express();
 import schools from './routes/schools.js'
 app.use(express.json())
 app.use('/',schools);
-
-app.listen(5000,()=>{
+const PORT = process.env.PORT || 5000;
+app.listen(PORT,()=>{
     console.log("The project is running");
 })

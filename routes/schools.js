@@ -20,7 +20,7 @@ router.post('/addSchool',(req,res)=>{
 
 })
 
-router.post('/list-Schools',(req,res)=>{
+router.post('/listSchools',(req,res)=>{
     const {latitude, longitude} = req.body;
     if(!latitude|| !longitude){
         return res.status(400).json({ error:"Invalid input. Provide valid latitude, and longitude." });
